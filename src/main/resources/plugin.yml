@@ -1,0 +1,107 @@
+name: SaikoMC
+version: 1.0.0
+main: dev.saikomc.SaikoMC
+api-version: '1.20'
+softdepend: [LuckPerms, PlaceholderAPI]
+description: SaikoMC economy, stat scoreboard, gambling, shops, market and more.
+commands:
+  saikomc:
+    description: Help and reload
+    usage: /saikomc [help|reload]
+    aliases: [smc]
+  balance:
+    description: Show your balance
+    usage: /balance [player]
+    aliases: [bal, money]
+  pay:
+    description: Send money to a player
+    usage: /pay <player> <amount>
+  baltop:
+    description: Richest players
+    usage: /baltop
+    aliases: [moneytop, richest]
+  setbalance:
+    description: Set a player's balance
+    usage: /setbalance <player> <amount>
+    aliases: [setbal]
+    permission: saikomc.admin
+  addbalance:
+    description: Add money to a player
+    usage: /addbalance <player> <amount>
+    aliases: [addbal]
+    permission: saikomc.admin
+  removebalance:
+    description: Remove money from a player
+    usage: /removebalance <player> <amount>
+    aliases: [rembal, takebal]
+    permission: saikomc.admin
+  resetbalance:
+    description: Reset a player's balance to the starting balance
+    usage: /resetbalance <player>
+    aliases: [resetbal]
+    permission: saikomc.admin
+  giveall:
+    description: Give every online player money
+    usage: /giveall <amount>
+    permission: saikomc.admin
+  rain:
+    description: Split money between random online players
+    usage: /rain <total> [winners]
+    permission: saikomc.admin
+  eco:
+    description: Admin economy control
+    usage: /eco <give|take|set> <player> <amount>
+    permission: saikomc.admin
+  stats:
+    description: Show player stats
+    usage: /stats [player]
+  playtime:
+    description: Show playtime
+    usage: /playtime [player]
+    aliases: [pt]
+  scoreboard:
+    description: Toggle the sidebar scoreboard
+    usage: /scoreboard
+    aliases: [sb]
+  worth:
+    description: Check the sell price of the item in your hand
+    usage: /worth
+  daily:
+    description: Claim your daily reward
+    usage: /daily
+  coinflip:
+    description: Flip a coin
+    usage: /coinflip <amount> [heads|tails]
+    aliases: [cf]
+  slots:
+    description: Play the slot machine
+    usage: /slots <amount>
+  dice:
+    description: Roll dice against the house
+    usage: /dice <amount>
+  shop:
+    description: Open the server shop
+    usage: /shop
+  sell:
+    description: Sell the item in your hand
+    usage: /sell
+  sellall:
+    description: Sell everything sellable in your inventory
+    usage: /sellall
+  market:
+    description: Player-to-player market
+    usage: /market [sell <price>]
+    aliases: [bazaar]
+  bounty:
+    description: Place or list bounties
+    usage: /bounty <player> <amount> | /bounty list
+  withdraw:
+    description: Turn money into a banknote item
+    usage: /withdraw <amount>
+  lottery:
+    description: Buy lottery tickets
+    usage: /lottery [buy <n>|info]
+permissions:
+  saikomc.admin:
+    description: Admin commands
+    default: op
